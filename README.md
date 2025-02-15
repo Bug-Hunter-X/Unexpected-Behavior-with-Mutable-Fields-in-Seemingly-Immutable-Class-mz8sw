@@ -1,0 +1,3 @@
+# Scala Bug: Mutable Field in Immutable Context
+
+This repository demonstrates a subtle bug that can occur in Scala when using mutable fields within a class that's intended to be used as if it were immutable.  While the class itself isn't declared `case class` or `final`, it's treated as such by adding it to immutable collections (ListBuffer in this case).  Mutable fields can cause unexpected behavior and inconsistencies when interacting with these collections.
